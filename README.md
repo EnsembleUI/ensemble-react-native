@@ -1,4 +1,4 @@
-# ensemble-react-native
+# Ensemble Reactive Native Wrapper
 
 React native wrapper of ensemble package
 
@@ -12,22 +12,13 @@ npm install ensemble-react-native
 
 
 ```js
-import { multiply } from 'ensemble-react-native';
+import { openEnsembleApp } from 'ensemble-react-native';
 
 // ...
 
-const result = await multiply(3, 7);
+<TouchableOpacity onPress={openEnsembleApp}>
+    <Text>Go to Ensemble Screen</Text>
+</TouchableOpacity>
 ```
 
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
