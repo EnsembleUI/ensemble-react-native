@@ -69,6 +69,10 @@ android {
     release {
       minifyEnabled false
     }
+    profile {
+      initWith debug
+    }
+
   }
 
   lintOptions {
@@ -98,6 +102,14 @@ android {
 repositories {
   mavenCentral()
   google()
+
+  maven {
+    url "../ensemble_app/build/host/outputs/repo"
+  }
+  maven {
+    url "https://storage.googleapis.com/download.flutter.io"
+  }
+
 }
 
 
@@ -106,6 +118,11 @@ dependencies {
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
+
+  debugImplementation 'com.ensembleui.ensemble_app:flutter_debug:1.0'
+  profileImplementation 'com.ensembleui.ensemble_app:flutter_profile:1.0'
+  releaseImplementation 'com.ensembleui.ensemble_app:flutter_release:1.0'
+
 }
 
 if (isNewArchitectureEnabled()) {

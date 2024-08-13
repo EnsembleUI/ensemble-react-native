@@ -16,14 +16,18 @@ const EnsembleReactNativeModule = isTurboModuleEnabled
 const EnsembleReactNative = EnsembleReactNativeModule
   ? EnsembleReactNativeModule
   : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+    {},
+    {
+      get() {
+        throw new Error(LINKING_ERROR);
+      },
+    }
+  );
 
 export function multiply(a: number, b: number): Promise<number> {
   return EnsembleReactNative.multiply(a, b);
 }
+
+export const openEnsembleApp = (): Promise<string> => {
+  return EnsembleReactNative.openEnsembleApp();
+};

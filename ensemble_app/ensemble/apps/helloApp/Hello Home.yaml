@@ -1,0 +1,22 @@
+View:
+  styles:
+    useSafeArea: true
+
+  # Optional - set the header for the screen
+  header:
+    titleText: Home
+
+  # Specify the body of the screen
+  body:
+    Column:
+      styles:
+        padding: 24
+        gap: 8
+      children:
+        - Text:
+            text: Hi there!
+        - Button:
+            label: Checkout Ensemble Kitchen Sink
+            onTap:
+              openUrl:
+                url: 'https://studio.ensembleui.com/preview/index.html?appId=e24402cb-75e2-404c-866c-29e6c3dd7992'

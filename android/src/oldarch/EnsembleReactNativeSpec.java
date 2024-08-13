@@ -10,4 +10,6 @@ abstract class EnsembleReactNativeSpec extends ReactContextBaseJavaModule {
   }
 
   public abstract void multiply(double a, double b, Promise promise);
+  public abstract void openEnsembleApp(Promise promise);
+
 }
