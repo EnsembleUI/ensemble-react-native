@@ -28,7 +28,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.footer}>
-        <Text style={styles.footerText}>React Native & Flutter Integration</Text>
+        <Text style={styles.footerText}>React Native & Ensemble Integration</Text>
       </View>
     </SafeAreaView>
   );
